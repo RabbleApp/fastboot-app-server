@@ -31,7 +31,7 @@ class ExpressHTTPServer {
     this.beforeMiddleware(app);
 
     if (this.gzip) {
-      this.app.use(require('compression')());
+      this.app.use(require('shrink-ray-current')());
     }
 
     if (username !== undefined || password !== undefined) {
